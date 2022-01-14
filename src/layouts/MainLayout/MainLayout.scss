@@ -1,0 +1,15 @@
+.main-layout {
+    align-items: center;
+    background-color: color('dark-grey');
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+    
+    &_body {
+        display: flex;
+    }
+}
+
+
+
