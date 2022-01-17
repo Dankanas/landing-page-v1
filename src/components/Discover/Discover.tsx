@@ -22,7 +22,7 @@ const Discover: FC = () => {
         <div className={`${className}_element1`}>
           <MusicPlayer data={audioData} />{" "}
           <div className={`${className}_button`}>
-          <LinkS to="services" spy={true} smooth={true}><Button name={"Tell me more!"} /></LinkS>
+          <LinkS to="services" spy={true} smooth={true} offset={70}><Button name={"Tell me more!"} /></LinkS>
           </div>
         </div>
         <div className={`${className}_element2`}>

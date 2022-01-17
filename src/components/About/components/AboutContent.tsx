@@ -15,7 +15,7 @@ const AboutContent : FC = () => {
                 On The Move Studios
             </h1>
             <p className={`${className}_p`}>{paragraph}</p>
-            <LinkS to="discover" spy={true} smooth={true}><Button name={"Tell me more!"} /></LinkS>
+            <LinkS to="discover" spy={true} smooth={true} offset={70}><Button name={"Tell me more!"} /></LinkS>
             
         </div>
     )
