@@ -33,7 +33,7 @@ const Hero: FC = () => {
             novel and unique.{" "}
           </p>
           <p className={`${className}_p2`}>We are On The Move Studios.</p>
-          <LinkS to="about" spy={true} smooth={true} offset={70}><Button name={"Get Started!"}/></LinkS>
+          <LinkS to="about" spy={true} smooth={true} offset={-70}><Button name={"Get Started!"}/></LinkS>
         </div>
       </div>
     </div>
