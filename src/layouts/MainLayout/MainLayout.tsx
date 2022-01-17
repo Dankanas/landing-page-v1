@@ -1,5 +1,8 @@
 import React, { FunctionComponent, ReactNode, useState } from "react";
+import { useSelector } from "react-redux";
+import classNames from "classnames";
 
+import { ApplicationState } from "../../store/types";
 import Header from "../../components/Header/Header";
 import Hero from "../../components/Hero";
 import Sidebar from "../../components/Sidebar";
@@ -15,10 +18,13 @@ const MainLayout: FunctionComponent<MainLayoutProps> = ({
   children,
 }: MainLayoutProps) => {
   const className: string = "main-layout";
+  const isSidebarOpen = useSelector((state: ApplicationState) => state.isSidebarOpen);
+  const classNameMainLayout = classNames(className, {"sidebar-open" : isSidebarOpen });
+  
   return (
-    <div className={className}>
-      <Header />
+    <div className={classNameMainLayout}>
       <Sidebar />
+      <Header />
       <Hero />
       <About />
       <Discover />

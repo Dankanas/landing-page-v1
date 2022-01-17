@@ -1,4 +1,6 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
+import {Link as LinkS} from 'react-scroll';
+
 import Button from '../../Button';
 
 import './DiscoverContent.scss'
@@ -13,7 +15,7 @@ const DiscoverContent : FC = () => {
                 Discover Our Artists
             </h1>
             <p className={`${className}_p`}>{paragraph}</p>
-            <div className={`${className}_button`}><Button name={"Tell me more!"} /></div>
+            <div className={`${className}_button`}><LinkS to="services" spy={true} smooth={true}><Button name={"Tell me more!"} /></LinkS></div>
             
         </div>
     )

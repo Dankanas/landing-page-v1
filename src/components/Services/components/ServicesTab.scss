@@ -6,9 +6,16 @@
   justify-content: center;
   align-items: start;
   gap: 20px;
+  transition-duration: 0.3s;
 
   @include if-tablet {
     flex-direction: column;
+  }
+
+  &:hover {
+    height: 103%;
+    width: 103%;
+    transition-duration: 0.3s;
   }
 
   &.reversed {
@@ -19,15 +26,27 @@
   }
 
   &.smallP {
-      @include if-tablet {
-          padding: 75px 0 0;
-      }
+    @include if-tablet {
+      padding: 75px 0 0;
+    }
+  }
+  &.smallP:hover {
+    @include if-tablet {
+      height: 115%;
+      transition-duration: 0.3s;
+    }
   }
   &.bigP {
     @include if-tablet {
-        padding: 150px 0 0;
+      padding: 150px 0 0;
     }
-}
+  }
+  &.bigP:hover {
+    @include if-tablet {
+      height: 130%;
+      transition-duration: 0.3s;
+    }
+  }
 
   &_img {
     flex: 1;

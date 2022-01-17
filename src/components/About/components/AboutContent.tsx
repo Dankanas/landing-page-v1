@@ -1,5 +1,7 @@
 import React, { FC } from 'react'
+import { Link as LinkS } from 'react-scroll';
 import Button from '../../Button';
+
 
 import './AboutContent.scss'
 
@@ -13,7 +15,7 @@ const AboutContent : FC = () => {
                 On The Move Studios
             </h1>
             <p className={`${className}_p`}>{paragraph}</p>
-            <Button name={"Tell me more!"} />
+            <LinkS to="discover" spy={true} smooth={true}><Button name={"Tell me more!"} /></LinkS>
             
         </div>
     )

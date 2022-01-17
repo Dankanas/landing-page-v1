@@ -14,8 +14,9 @@ const Hero: FC = () => {
   const className = "hero";
   const isSidebarOpen = useSelector((state: ApplicationState) => state.isSidebarOpen);
   const classNameHero = classNames(className, {"sidebar-open": isSidebarOpen});
+  const classNameHeroWrapperOut = classNames(`${className}_wrapper_out`, {"sidebar-open": isSidebarOpen});
   return (
-    <div className={classNameHero}>
+    <div className={classNameHero} id={className}>
       <video
         className={`${className}_video`}
         autoPlay
@@ -24,7 +25,7 @@ const Hero: FC = () => {
         src={Video}
         typeof="video/mp4"
       />
-      <div className={`${className}_wrapper_out`}>
+      <div className={classNameHeroWrapperOut}>
         <div className={`${className}_wrapper_in`}>
           <h1 className={`${className}_h1`}>Professional music production</h1>
           <p className={`${className}_p`}>

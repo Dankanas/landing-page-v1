@@ -1,8 +1,7 @@
 .hero {
-  margin-top: -70px;
   background-color: color("primary");
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   transition: all 1s ease-in-out;
 
   &.sidebar-open {
@@ -23,13 +22,23 @@
       top: 0;
       position: absolute;
       display: flex;
-      height: 100vh;
+      height: 110vh;
       width: 100%;
       background-color: rgba(100, 100, 100, 0.2);
       align-items: center;
       justify-content: center;
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
+
+      &.sidebar-open {
+        opacity: 0;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+      }
+
     }
     &_in {
+      position: absolute;
       margin-top: 100px;
       padding: 100px 20px;
       height: 70vh;
@@ -41,6 +50,11 @@
       justify-content: center;
       text-align: center;
       align-items: center;
+      
+      @include if-mobile {
+        width: 80vw;
+      }
+      
     }
   }
   &_h1 {

@@ -1,70 +1,99 @@
 .footer {
-    background-color: color('dark');
-    height: 100%;
-    width: 100%;
-    padding: 30px 20px;
+  background-color: color("dark");
+  height: 100%;
+  width: 100%;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  &.sidebar-open {
+    filter: blur(5px);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+  }
+
+  &_logo {
+    width: 60px;
+    margin-bottom: 12px;
+  }
+
+  &_footerwrap {
+    @include if-tablet {
+      display: flex;
+      gap: 30px;
+      margin-left: 46px;
+    }
+  }
+
+  &_menu {
+    list-style-type: none;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    &_logo {
-        width: 60px;
-        margin-bottom: 12px;
+    gap: 12px;
+    @include if-tablet {
+      flex-direction: column;
+      gap: 0;
     }
 
-    &_menu {
-        list-style-type: none;
-        display: flex;
-        gap: 12px;
-
-        &_item {
-            font-family: 'Saira Condensed', sans-serif;
-            font-size: 0.8rem;
-            color: color('light');
-        }
+    &_item {
+      font-family: "Saira Condensed", sans-serif;
+      font-size: 0.8rem;
+      color: color("light");
+      cursor: pointer;
     }
+  }
 
-    &_title {
-        font-family: 'Saira Condensed', sans-serif;
-        color: color('light');
-        font-weight: bold;
-        font-size: 1.2rem;
+  &_title {
+    font-family: "Saira Condensed", sans-serif;
+    color: color("light");
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  &_p {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 0.8rem;
+    color: color("light");
+  }
+
+  &_contacts {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 20px;
+    @include if-tablet {
+      display: flex;
+      margin-top: 0;
     }
+  }
 
-    &_p {
-        font-family: 'Saira Condensed', sans-serif;
-            font-size: 0.8rem;
-            color: color('light');
-            display: flex;
-            flex-direction: column;
+  &_wrapper {
+    flex: 1;
+    justify-self: start;
+    text-decoration: none;
+
+    &_social {
+      flex: 1;
+      justify-self: center;
     }
+  }
 
-    &_contacts {
-        margin-top: 20px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 30px;
-        margin-bottom: 20px;
-    }
+  &_icon {
+    width: 30px;
+    margin-bottom: 30px;
+  }
 
-    &_wrapper {
-        flex: 1;
-        justify-self: center;
-    }
+  &_note {
+    font-size: 0.8rem;
+    font-family: "Saira Condensed", sans-serif;
+    color: color("light");
+  }
 
-    &_icon {
-        width: 30px;
-        margin-bottom: 30px;
-    }
-
-    &_note {
-        font-size: 0.8rem;
-        font-family: 'Saira Condensed', sans-serif;
-        color: color('light');
-    }
-
-
-
+  &_link {
+    text-decoration: none;
+  }
 }

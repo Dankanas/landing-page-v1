@@ -6,6 +6,9 @@
     height: 100%;
     width: 100vw;
     overflow-y: visible;
+    &.sidebar-open {
+        overflow: hidden;
+    }
     
     &_body {
         display: flex;
