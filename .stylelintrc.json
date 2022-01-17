@@ -2,8 +2,7 @@
   "extends": "stylelint-config-standard",
   "plugins": [
     "stylelint-order",
-    "stylelint-scss",
-    "stylelint-declaration-use-variable"
+    "stylelint-scss"
 ],
   "rules": {
     "at-rule-no-unknown": null,
@@ -15,6 +14,18 @@
     "at-rule-empty-line-before": null,
     "block-closing-brace-newline-before": null,
     "no-extra-semicolons": null,
-    "no-eol-whitespace": null
+    "no-eol-whitespace": null,
+    "rule-empty-line-before": null,
+    "block-closing-brace-empty-line-before": null,
+    "declaration-colon-space-after": null,
+    "string-quotes": null,
+    "color-function-notation": null,
+    "alpha-value-notation": null,
+    "font-family-name-quotes": null,
+    "selector-class-pattern": null,
+    "no-missing-end-of-source-newline": null,
+    "property-no-vendor-prefix": null
+
+
   }
 }

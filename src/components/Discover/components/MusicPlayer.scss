@@ -1,0 +1,51 @@
+.musicplayer {
+    height: 100%;
+    width: 100%;
+    background-color: color('dark-blue');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 250px;
+        height: 150px;
+        margin-bottom: 20px;
+        @include if-tablet {
+            height: 220px;
+            width: 300px;
+        }
+    }
+
+    &_img {
+        width: 150px;
+        height: 150px;
+        @include if-tablet {
+            height: 220px;
+            width: 220px;
+        }
+        
+    }
+
+    &_icon {
+        width: 25px;
+    }
+
+    &_artist {
+        margin-top: 10px;
+        color: color('light-sepia');
+        font-family: 'Saira Condensed', sans-serif;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    &_song {
+        color: color('light-sepia');
+        font-family: 'Saira Condensed', sans-serif;
+        text-align: center;
+    }
+}

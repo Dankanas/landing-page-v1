@@ -1,10 +1,12 @@
 $color-dark: #151515;
 $color-light: #eee;
 $color-dark-grey: #242424;
-$color-primary: #118DBA;
+$color-primary: #4b8abe;
 $color-grey: #ADADAD;
 $color-light-grey: #dddddd;
 $color-transparent: rgba(0, 0, 0, 0);
+$color-light-sepia: #d6d5c8;
+$color-dark-blue: #282831;
 
 $theme-colors: (
   'dark': $color-dark,
@@ -13,7 +15,9 @@ $theme-colors: (
   'primary': $color-primary,
   'grey': $color-grey,
   'light-grey': $color-light-grey,
-  'transparent': $color-transparent
+  'transparent': $color-transparent,
+  'light-sepia': $color-light-sepia,
+  'dark-blue': $color-dark-blue
 );
 
 @function color($_key) {

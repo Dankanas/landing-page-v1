@@ -1,0 +1,70 @@
+.footer {
+    background-color: color('dark');
+    height: 100%;
+    width: 100%;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_logo {
+        width: 60px;
+        margin-bottom: 12px;
+    }
+
+    &_menu {
+        list-style-type: none;
+        display: flex;
+        gap: 12px;
+
+        &_item {
+            font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.8rem;
+            color: color('light');
+        }
+    }
+
+    &_title {
+        font-family: 'Saira Condensed', sans-serif;
+        color: color('light');
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    &_p {
+        font-family: 'Saira Condensed', sans-serif;
+            font-size: 0.8rem;
+            color: color('light');
+            display: flex;
+            flex-direction: column;
+    }
+
+    &_contacts {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 20px;
+    }
+
+    &_wrapper {
+        flex: 1;
+        justify-self: center;
+    }
+
+    &_icon {
+        width: 30px;
+        margin-bottom: 30px;
+    }
+
+    &_note {
+        font-size: 0.8rem;
+        font-family: 'Saira Condensed', sans-serif;
+        color: color('light');
+    }
+
+
+
+}

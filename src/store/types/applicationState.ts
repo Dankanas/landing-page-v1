@@ -1,5 +1,5 @@
 export interface ApplicationState {
-  lightMode: boolean;
+  isSidebarOpen: boolean;
 }
 
 

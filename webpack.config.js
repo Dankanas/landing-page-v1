@@ -67,6 +67,14 @@ module.exports = {
         test: /\.xml$/i,
         use: ['xml-loader'],
       },
+      {
+        test: /\.(mp4|mp3)$/,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+ },
     ],
   },
   plugins: [

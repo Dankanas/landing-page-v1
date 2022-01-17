@@ -4,8 +4,8 @@ import initialState from './initialState';
 
 const reducer = (state = initialState, action: Action): ApplicationState => {
   switch (action.type) {
-    case ActionTypes.ToggleLightMode: {
-      return {...state, lightMode: !state.lightMode};
+    case ActionTypes.ToggleSidebar: {
+      return {...state, isSidebarOpen: !state.isSidebarOpen};
     }
     default: {
       return state;

@@ -1,12 +1,12 @@
-export interface ToggleLightMode {
-  type: ActionTypes.ToggleLightMode;
+export interface ToggleSidebar {
+  type: ActionTypes.ToggleSidebar;
   payload: null;
 }
 
 export enum ActionTypes {
-  ToggleLightMode = 'TOGGLE_LIGHT_MODE'
+  ToggleSidebar = 'TOGGLE_SIDEBAR'
 }
 
-export type Action = ToggleLightMode;
+export type Action = ToggleSidebar;
 
 
