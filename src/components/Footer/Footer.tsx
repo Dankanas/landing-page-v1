@@ -3,28 +3,30 @@ import { Link as LinkS } from "react-scroll";
 import { useSelector } from "react-redux";
 import classNames from "classnames";
 
-import { ApplicationState } from "../../store/types";
-import Logo from "../Logo";
 import Icon from "../Icon";
 
+import { ApplicationState } from "../../store/types";
 import "./Footer.scss";
 
 const Footer: FC = () => {
   const className = "footer";
-  const isSidebarOpen = useSelector((state: ApplicationState) => state.isSidebarOpen);
-  const classNameFooter = classNames(className, {"sidebar-open" : isSidebarOpen });
+  const isSidebarOpen = useSelector(
+    (state: ApplicationState) => state.isSidebarOpen
+  );
+  const classNameFooter = classNames(className, {
+    "sidebar-open": isSidebarOpen,
+  });
   return (
     <div className={classNameFooter}>
-      <div className={`${className}_logo`}>
-        <LinkS
-          to="hero"
-          spy={true}
-          smooth={true}
-          offset={-70}
-        >
-          <Logo />
-        </LinkS>
-      </div>
+      <LinkS
+        to="hero"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        className={`${className}_logo`}
+      >
+        <span className={`${className}_logo_style`}>OTM</span>
+      </LinkS>
       <div className={`${className}_footerwrap`}>
         <div>
           <div className={`${className}_title`}>Explore</div>

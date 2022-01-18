@@ -1,19 +1,20 @@
 import React, { FC } from "react";
 import { useSelector } from "react-redux";
 import { Link as LinkS } from "react-scroll";
-import { ApplicationState } from "../../store/types";
+import { Link as LinkR } from "react-router-dom";
 import classNames from "classnames";
 
 import Icon from "../Icon";
 import { ToggleSidebar } from "../../store/action";
 
 import "./Sidebar.scss";
+import { ApplicationState } from "../../store/types";
+import routes from "../../constants/routes";
 
 const Sidebar: FC = () => {
   const isSidebarOpen = useSelector(
     (state: ApplicationState) => state.isSidebarOpen
   );
-  console.log(isSidebarOpen);
   const className = "sidebar";
   const classNameSidebar = classNames(className, { isOpen: isSidebarOpen });
   return (
@@ -43,12 +44,9 @@ const Sidebar: FC = () => {
           </li>
         </LinkS>
       </ul>
-      <button
-        className={`${className}_menu_button`}
-        onClick={() => console.log("Pasispaude")}
-      >
+      <LinkR className={`${className}_menu_button`} to={routes.join}>
         Join Now!
-      </button>
+      </LinkR>
     </div>
   );
 };

@@ -1,57 +1,54 @@
 .discovercontent {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    grid-template-rows: 25px 1fr 2fr 1fr;
-    flex-direction: column;
-    align-items: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  grid-template-rows: 25px 1fr 2fr 1fr;
+  flex-direction: column;
+  align-items: center;
 
-    &_subtitle {
-        font-family: 'Saira Condensed', sans-serif;
-        font-size: 1rem;
-        color: color('light-sepia');
-        @include if-tablet {
-            text-align: justify;
-        }
+  &_subtitle {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1rem;
+    color: color("light-sepia");
+    @include if-tablet {
+      text-align: justify;
     }
+  }
 
-    &_title {
-        color: color('primary');
-        font-size: 2rem;
-        line-height: 2rem;
-        text-shadow: 2px 2px black;
-        text-align: center;
-        @include if-tablet {
-            font-size: 3rem;
-            line-height: 3rem;
-            text-align: left;
-        }
+  &_title {
+    color: color("primary");
+    font-size: 2rem;
+    line-height: 2rem;
+    text-shadow: 2px 2px black;
+    text-align: center;
+    @include if-tablet {
+      font-size: 3rem;
+      line-height: 3rem;
+      text-align: left;
     }
+  }
 
-    &_p {
-        font-family: 'PT Sans Narrow', sans-serif;
-        font-size: 0.9rem;
-        margin-top: 30px;
-        text-align: justify;
-        height: 160px;
-        margin-bottom: 20px;
-        color: color('light-sepia');
-        @include if-mobile {
-            height: 130px;
-        }
-        @include if-tablet {
-            font-size: 1rem;
-            height: 300px;
-        }
+  &_p {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    text-align: justify;
+    height: 160px;
+    margin-bottom: 20px;
+    color: color("light-sepia");
+    @include if-mobile {
+      height: 130px;
     }
-
-    &_button {
-        display: none;
-        @include if-tablet {
-            display:inline;
-        }
-
+    @include if-tablet {
+      font-size: 1rem;
+      height: 300px;
     }
+  }
+
+  &_button {
+    display: none;
+    @include if-tablet {
+      display: inline;
+    }
+  }
 }
-
-

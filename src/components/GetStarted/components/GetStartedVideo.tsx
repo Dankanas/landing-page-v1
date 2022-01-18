@@ -1,11 +1,8 @@
 import React , { FC } from 'react'
 
 import './GetStartedVideo.scss'
-
 import PortraitVideo from '../../../assets/Video/video3.mp4'
 import LandscapeVideo from '../../../assets/Video/video4.mp4'
-
-
 
 const GetStartedVideo : FC  = () => {
     const className = 'get-started-video';

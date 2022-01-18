@@ -9,6 +9,4 @@ const persistedState = initialState;
 
 const store = createStore(reducer, persistedState, composeWithDevTools()); 
 
-// Cia kazka pratryniau sudinai. Reikia Store konfiguracija  pasiziureiti pagal Roko pavyzdi
-
 export default store;

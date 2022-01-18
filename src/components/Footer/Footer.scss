@@ -16,8 +16,19 @@
   }
 
   &_logo {
-    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-bottom: 2px solid color("primary");
     margin-bottom: 12px;
+    cursor: pointer;
+
+    &_style {
+      font-size: 1.6rem;
+      color: color("light-grey");
+      width: 60px;
+    }
   }
 
   &_footerwrap {

@@ -2,10 +2,10 @@ import React, { FC } from "react";
 import { useSelector } from "react-redux";
 import classNames from "classnames";
 
-import { ApplicationState } from "../../store/types";
 import GetStartedContent from "./components/GetStartedContent";
 import GetStartedVideo from "./components/GetStartedVideo";
 
+import { ApplicationState } from "../../store/types";
 import "./GetStarted.scss";
 
 const GetStarted: FC = () => {

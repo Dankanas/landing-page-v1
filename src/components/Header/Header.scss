@@ -9,8 +9,18 @@
   z-index: 10;
   transition-duration: 0.3s;
   &.scroll {
-    background-color: color('dark-blue');
+    background-color: color("dark-blue");
     transition-duration: 0.3s;
+    width: 100%;
+  }
+  &.transparent {
+    background-color: color("dark-blue");
+    transition-duration: 0.3s;
+  }
+
+  &.sidebaropen {
+    opacity: 0;
+    transition-duration: 1s;
   }
 
   &_container {
@@ -22,7 +32,6 @@
     padding: 0 30px;
     max-width: 1200px;
     width: 100%;
-
   }
 
   &_menu {
@@ -52,7 +61,6 @@
           border-bottom: 3px solid color("primary");
           border-color: color("primary");
           transition-duration: 0.05s;
-
         }
       }
     }
@@ -67,8 +75,10 @@
       height: 50px;
       border: none;
       padding: 0 20px;
-      border-radius: 10px;
+      border-radius: 20px;
       text-shadow: 2px 2px black;
+      text-decoration: none;
+      box-shadow: 2px 2px black;
       @include if-tablet {
         display: flex;
         align-items: center;

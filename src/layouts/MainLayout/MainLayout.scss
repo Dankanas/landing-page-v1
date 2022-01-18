@@ -1,19 +1,16 @@
 .main-layout {
-    align-items: center;
-    background-color: color('light-sepia');
+  align-items: center;
+  background-color: color("light-sepia");
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100vw;
+  overflow-y: visible;
+  &.sidebar-open {
+    overflow: hidden;
+  }
+
+  &_body {
     display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100vw;
-    overflow-y: visible;
-    &.sidebar-open {
-        overflow: hidden;
-    }
-    
-    &_body {
-        display: flex;
-    }
+  }
 }
-
-
-

@@ -1,33 +1,35 @@
-import React, { FC, useState , useRef, useEffect} from "react";
+import React, { FC, useState, useRef, useEffect } from "react";
 
-import "./MusicPlayer.scss";
-import Image from "../../../assets/Images/pic2.jpeg";
 import Icon from "../../Icon";
+
+import Image from "../../../assets/Images/pic2.jpeg";
+import "./MusicPlayer.scss";
 
 const MusicPlayer: FC<MusicPlayerProps> = ({ data }: MusicPlayerProps) => {
   const [songIndex, setSongIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const numberOfSongs = data.length;
   const audioElement = useRef(null);
-  const audioDiv = <audio ref={audioElement} src={data[songIndex].songSrc}></audio>;
+  const audioDiv = (
+    <audio ref={audioElement} src={data[songIndex].songSrc}></audio>
+  );
   const handlePrev = () => {
-      if (songIndex === 0) {
-          setSongIndex(numberOfSongs - 1);
-      } else setSongIndex(songIndex - 1);
+    if (songIndex === 0) {
+      setSongIndex(numberOfSongs - 1);
+    } else setSongIndex(songIndex - 1);
   };
   const handleNext = () => {
     if (songIndex < numberOfSongs - 1) {
       setSongIndex(songIndex + 1);
     } else setSongIndex(0);
-  } ;
-  useEffect(()=> {
-      if (isPlaying) {
-          audioElement.current.play();
-      } else {
-          audioElement.current.pause();
-      }
-
-  }, )
+  };
+  useEffect(() => {
+    if (isPlaying) {
+      audioElement.current.play();
+    } else {
+      audioElement.current.pause();
+    }
+  });
   const className = "musicplayer";
   return (
     <div className={className}>
@@ -40,7 +42,10 @@ const MusicPlayer: FC<MusicPlayerProps> = ({ data }: MusicPlayerProps) => {
           <Icon name="next" />
         </div>
       </div>
-      <div className={`${className}_icon`} onClick={() => setIsPlaying(!isPlaying)}>
+      <div
+        className={`${className}_icon`}
+        onClick={() => setIsPlaying(!isPlaying)}
+      >
         <Icon name={isPlaying ? "pause" : "play"} />
       </div>
       <div>

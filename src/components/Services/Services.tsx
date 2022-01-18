@@ -11,16 +11,20 @@ import "./Services.scss";
 
 const Services: FC = () => {
   const className = "services";
-  const isSidebarOpen = useSelector((state: ApplicationState) => state.isSidebarOpen);
-  const classNameServices = classNames(className, {"sidebar-open" : isSidebarOpen });
+  const isSidebarOpen = useSelector(
+    (state: ApplicationState) => state.isSidebarOpen
+  );
+  const classNameServices = classNames(className, {
+    "sidebar-open": isSidebarOpen,
+  });
 
   return (
     <div className={classNameServices} id={className}>
-        <ServicesContent />
+      <ServicesContent />
       <div className={`${className}_container`}>
-          <ServicesTab data={servicesData.recording}/>
-          <ServicesTab data={servicesData.mixing}/>
-          <ServicesTab data={servicesData.mastering}/>
+        <ServicesTab data={servicesData.recording} />
+        <ServicesTab data={servicesData.mixing} />
+        <ServicesTab data={servicesData.mastering} />
       </div>
     </div>
   );

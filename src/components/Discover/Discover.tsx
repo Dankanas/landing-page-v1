@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import {Link as LinkS} from "react-scroll";
+import { Link as LinkS } from "react-scroll";
 import { useSelector } from "react-redux";
 import classNames from "classnames";
 
@@ -13,8 +13,12 @@ import { ApplicationState } from "../../store/types";
 
 const Discover: FC = () => {
   const className = "discover";
-  const isSidebarOpen = useSelector((state: ApplicationState) => state.isSidebarOpen);
-  const classNameDiscover = classNames(className, {"sidebar-open" : isSidebarOpen });
+  const isSidebarOpen = useSelector(
+    (state: ApplicationState) => state.isSidebarOpen
+  );
+  const classNameDiscover = classNames(className, {
+    "sidebar-open": isSidebarOpen,
+  });
 
   return (
     <div className={classNameDiscover} id={className}>
@@ -22,7 +26,9 @@ const Discover: FC = () => {
         <div className={`${className}_element1`}>
           <MusicPlayer data={audioData} />{" "}
           <div className={`${className}_button`}>
-          <LinkS to="services" spy={true} smooth={true} offset={-70}><Button name={"Tell me more!"} /></LinkS>
+            <LinkS to="services" spy={true} smooth={true} offset={-70}>
+              <Button name={"Tell me more!"} />
+            </LinkS>
           </div>
         </div>
         <div className={`${className}_element2`}>

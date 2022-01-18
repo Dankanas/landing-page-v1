@@ -8,7 +8,7 @@ const ServicesTab: FC<ServiceTabProps> = ({ data }: ServiceTabProps) => {
   const classNameServicesTab = classNames(className, {
     reversed: data.reversed,
     smallP: "small" === data.padding,
-    bigP: "big" === data.padding
+    bigP: "big" === data.padding,
   });
   return (
     <div className={classNameServicesTab}>

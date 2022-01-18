@@ -4,7 +4,7 @@ import Icon from "../Icon";
 
 import "./Button.scss";
 
-const Button: FC<ButtonProps> = ( {name} : ButtonProps ) => {
+const Button: FC<ButtonProps> = ({ name }: ButtonProps) => {
   const className = "button";
 
   return (
@@ -20,5 +20,5 @@ const Button: FC<ButtonProps> = ( {name} : ButtonProps ) => {
 export default Button;
 
 interface ButtonProps {
-    name: string;
+  name: string;
 }

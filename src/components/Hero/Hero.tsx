@@ -1,20 +1,25 @@
 import React, { FC } from "react";
 import { useSelector } from "react-redux";
 import classNames from "classnames";
-import { Link as LinkS} from "react-scroll";
+import { Link as LinkS } from "react-scroll";
 
-import Video from "../../assets/Video/video.mp4";
-import { ApplicationState } from "../../store/types";
-import Icon from "../Icon";
 import Button from "../Button";
 
+import { ApplicationState } from "../../store/types";
+import Video from "../../assets/Video/video.mp4";
 import "./Hero.scss";
 
 const Hero: FC = () => {
   const className = "hero";
-  const isSidebarOpen = useSelector((state: ApplicationState) => state.isSidebarOpen);
-  const classNameHero = classNames(className, {"sidebar-open": isSidebarOpen});
-  const classNameHeroWrapperOut = classNames(`${className}_wrapper_out`, {"sidebar-open": isSidebarOpen});
+  const isSidebarOpen = useSelector(
+    (state: ApplicationState) => state.isSidebarOpen
+  );
+  const classNameHero = classNames(className, {
+    "sidebar-open": isSidebarOpen,
+  });
+  const classNameHeroWrapperOut = classNames(`${className}_wrapper_out`, {
+    "sidebar-open": isSidebarOpen,
+  });
   return (
     <div className={classNameHero} id={className}>
       <video
@@ -33,7 +38,9 @@ const Hero: FC = () => {
             novel and unique.{" "}
           </p>
           <p className={`${className}_p2`}>We are On The Move Studios.</p>
-          <LinkS to="about" spy={true} smooth={true} offset={-70}><Button name={"Get Started!"}/></LinkS>
+          <LinkS to="about" spy={true} smooth={true} offset={-70}>
+            <Button name={"Get Started!"} />
+          </LinkS>
         </div>
       </div>
     </div>

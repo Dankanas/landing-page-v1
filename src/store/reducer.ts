@@ -7,6 +7,12 @@ const reducer = (state = initialState, action: Action): ApplicationState => {
     case ActionTypes.ToggleSidebar: {
       return {...state, isSidebarOpen: !state.isSidebarOpen};
     }
+    case ActionTypes.PushForm: {
+      const tempArray = state.form;
+      console.log(tempArray);
+      tempArray.push(action.payload);
+      return {...state, form: [...tempArray]}
+    }
     default: {
       return state;
     }

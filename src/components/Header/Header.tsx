@@ -1,15 +1,18 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
+import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 import classNames from "classnames";
-import Icon from "../Icon";
-import MenuIcon from "../Icon/components/Menu.icon";
-import Logo from "../Logo";
 
+import Icon from "../Icon";
+import Logo from "../Logo";
 import { ToggleSidebar } from "../../store/action";
 
+import routes from "../../constants/routes";
 import "./Header.scss";
+import { useSelector } from "react-redux";
+import { ApplicationState } from "../../store/types";
 
-const Header: FC = () => {
+const Header: FC<HeaderProps> = ({ transparent }: HeaderProps) => {
   const className = "header";
   const [isScrolled, setIsScrolled] = useState(false);
   const handleScroll = () => {
@@ -22,8 +25,18 @@ const Header: FC = () => {
       setIsScrolled(false);
     }
   };
-  window.onscroll = () => handleScroll();
-  const classNameHeader = classNames(className, {"scroll": isScrolled});
+  const isSidebarOpen = useSelector((state : ApplicationState) => state.isSidebarOpen);
+  useEffect(() => {
+    window.onscroll = () => handleScroll();
+    return function cleanup() {
+      return null;
+    };
+  });
+  const classNameHeader = classNames(className, {
+    scroll: isScrolled,
+    transparent: !transparent,
+    sidebaropen: isSidebarOpen
+  });
   return (
     <div className={classNameHeader}>
       <div className={`${className}_container`}>
@@ -70,10 +83,16 @@ const Header: FC = () => {
             Get Started
           </LinkS>
         </ul>
-        <button className={`${className}_menu_button`}>Join Now!</button>
+        <LinkR className={`${className}_menu_button`} to={routes.join}>
+          Join Now!
+        </LinkR>
       </div>
     </div>
   );
 };
 
 export default Header;
+
+interface HeaderProps {
+  transparent: boolean;
+}

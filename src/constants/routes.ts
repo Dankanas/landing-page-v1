@@ -1,6 +1,6 @@
 const routes = {
-    home: '/',
-    join: '/join'
-}
+  home: "/",
+  join: "/join",
+};
 
 export default routes;
