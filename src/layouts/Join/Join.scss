@@ -1,0 +1,27 @@
+.join {
+  align-items: center;
+  background-color: color("dark-blue");
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow-y: visible;
+  padding: 20px;
+
+  &.sidebar-open {
+    overflow: hidden;
+  }
+
+  &_body {
+    margin-top: 70px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    @include if-mobile {
+      padding: 30px;
+    }
+  }
+}
