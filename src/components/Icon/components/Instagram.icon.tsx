@@ -12,6 +12,8 @@ const InstagramIcon: FC = () => {
       viewBox="0 0 300 300"
       xmlSpace="preserve"
       fill="#eee"
+      height="100%"
+      width="100%"
     >
       <g id="XMLID_504_">
         <path

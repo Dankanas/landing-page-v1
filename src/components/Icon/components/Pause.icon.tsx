@@ -12,6 +12,8 @@ const PauseIcon: FC = () => {
       viewBox="0 0 44 44"
       fill="#d6d5c8"
       xmlSpace="preserve"
+      height="100%"
+      width="100%"
     >
       <g>
         <path d="M15.5,0c-1.103,0-2,0.897-2,2v40c0,1.103,0.897,2,2,2s2-0.897,2-2V2C17.5,0.897,16.603,0,15.5,0z" />

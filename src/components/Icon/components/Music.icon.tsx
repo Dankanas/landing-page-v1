@@ -12,6 +12,8 @@ const MusicIcon: FC = () => {
       viewBox="0 0 612 612"
       fill="#ddd"
       xmlSpace="preserve"
+      height="100%"
+      width="100%"
     >
       <g>
         <g id="CD">

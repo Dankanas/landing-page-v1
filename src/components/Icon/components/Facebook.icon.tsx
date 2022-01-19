@@ -12,6 +12,8 @@ const FacebookIcon: FC = () => {
       viewBox="0 0 23.101 23.101"
       xmlSpace="preserve"
       fill="#eee"
+      height="100%"
+      width="100%"
     >
       <g>
         <path

@@ -12,6 +12,8 @@ const MenuIcon: FC = () => {
       fill="#ddd"
       viewBox="0 0 377 377"
       xmlSpace="preserve"
+      height="100%"
+      width="100%"
     >
       <g>
         <circle cx="15" cy="88.5" r="15" />

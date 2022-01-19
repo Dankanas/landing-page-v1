@@ -12,6 +12,8 @@ const PlayIcon: FC = () => {
       viewBox="0 0 280 280"
       xmlSpace="preserve"
       fill="#d6d5c8"
+      height="100%"
+      width="100%"
     >
       <g>
         <path

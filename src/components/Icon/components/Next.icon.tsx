@@ -6,6 +6,8 @@ const NextIcon = () => {
       viewBox="0 0 15 15"
       fill="#d6d5c8"
       xmlns="http://www.w3.org/2000/svg"
+      height="100%"
+      width="100%"
     >
       <path
         fillRule="evenodd"

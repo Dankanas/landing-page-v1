@@ -12,6 +12,8 @@ const CloseIcon: FC = () => {
       viewBox="0 0 330 330"
       fill="#ddd"
       xmlSpace="preserve"
+      height="100%"
+      width="100%"
     >
       <g>
         <path
